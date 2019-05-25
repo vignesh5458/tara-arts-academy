@@ -3,65 +3,66 @@ package com.organization.tara.entities;
 import java.util.Date;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-
+@Document(collection="event")
 public class Event {
 
 	@Id
-	private int eventId;
+	private String eventId;
 	
-	private String eventName;
+	private String name;
 	
-	private String eventDescription;
+	private String description;
 	
-	private Date eventDate;
+	private Date date;
 	
-	private String typeOfEvent;
+	private String type;
 	
 	private String venue;
 	
 	private boolean registrationOpen;
 	
-	private String eventGuidelines;
+	private String guidelines;
 
-	public int getEventId() {
+	public String getEventId() {
 		return eventId;
 	}
 
-	public void setEventId(int eventId) {
+	public void setEventId(String eventId) {
 		this.eventId = eventId;
 	}
 
-	public String getEventName() {
-		return eventName;
+	public String getName() {
+		return name;
 	}
 
-	public void setEventName(String eventName) {
-		this.eventName = eventName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getEventDescription() {
-		return eventDescription;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setEventDescription(String eventDescription) {
-		this.eventDescription = eventDescription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public Date getEventDate() {
-		return eventDate;
+	public Date getDate() {
+		return date;
 	}
 
-	public void setEventDate(Date eventDate) {
-		this.eventDate = eventDate;
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
-	public String getTypeOfEvent() {
-		return typeOfEvent;
+	public String getType() {
+		return type;
 	}
 
-	public void setTypeOfEvent(String typeOfEvent) {
-		this.typeOfEvent = typeOfEvent;
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getVenue() {
@@ -80,12 +81,14 @@ public class Event {
 		this.registrationOpen = registrationOpen;
 	}
 
-	public String getEventGuidelines() {
-		return eventGuidelines;
+	public String getGuidelines() {
+		return guidelines;
 	}
 
-	public void setEventGuidelines(String eventGuidelines) {
-		this.eventGuidelines = eventGuidelines;
+	public void setGuidelines(String guidelines) {
+		this.guidelines = guidelines;
 	}
+
+	
 	
 }
